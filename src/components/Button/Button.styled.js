@@ -6,18 +6,18 @@ export const ButtonWrapper = styled.button`
   padding: 10px 20px;
   color: #000;
   text-align: center;
-  box-shadow: 0 6px #999;
   transition: all 0.2s;
   cursor: pointer;
+  background-color: #34b6fe;
 
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: #c199f2;
     border-color: transparent;
+    color: white;
   }
   &:active {
     background-color: #3e8e41;
-    box-shadow: 0 3px #666;
     transform: translateY(4px);
   }
   & span {

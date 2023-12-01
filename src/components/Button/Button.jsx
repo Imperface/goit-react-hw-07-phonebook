@@ -1,13 +1,20 @@
-import { GoPersonAdd } from 'react-icons/go';
-import { RiDeleteBin6Line } from 'react-icons/ri';
+// import styled component
 import { ButtonWrapper } from './Button.styled';
 
-export const Button = ({ text, type, deleteContact = null }) => (
-  <ButtonWrapper type={type} onClick={deleteContact}>
-    <span>
-      {text === 'Add contact' && <GoPersonAdd />}
-      {text === 'Delete' && <RiDeleteBin6Line />}
-      {text}
-    </span>
-  </ButtonWrapper>
-);
+export const Button = ({
+  text,
+  type,
+  deleteContact = null,
+  isLoading,
+  icon = null,
+}) => {
+  console.log(isLoading);
+  return (
+    <ButtonWrapper disabled={isLoading} type={type} onClick={deleteContact}>
+      <span>
+        {icon && icon()}
+        {text}
+      </span>
+    </ButtonWrapper>
+  );
+};
